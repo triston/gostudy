@@ -13,7 +13,7 @@ func main() {
 }
 
 func readFile1() {
-	f, err := os.Open("./fileex.txt")
+	f, err := os.Open("./fileinfo-ex.go")
 	if err != nil {
 		panic(err)
 	}
@@ -28,7 +28,7 @@ func readFile1() {
 }
 
 func readFile2() {
-	finfo, err := os.Stat("./fileex.txt")
+	finfo, err := os.Stat("./fileinfo-ex.txt")
 	if err != nil {
 		panic(err)
 	}
