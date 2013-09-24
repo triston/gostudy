@@ -28,7 +28,7 @@ func readFile1() {
 }
 
 func readFile2() {
-	finfo, err := os.Stat("./fileinfo-ex.txt")
+	finfo, err := os.Stat("./fileinfo-ex.go")
 	if err != nil {
 		panic(err)
 	}
