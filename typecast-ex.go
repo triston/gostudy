@@ -19,7 +19,11 @@ func Int2Uint8(x int) (uint8, error) {
 }
 
 func main() {
+	
 	var i int = 127
+	// var i int = -1
+	// var i int = 128
+	
 	x, err := Int2Uint8(i)
 	if err != nil {
 		fmt.Println(err)
