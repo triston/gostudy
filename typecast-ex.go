@@ -12,7 +12,7 @@ import (
 
 
 func Int2Uint8(x int) (uint8, error) {
-	if 0 <= x && math.MaxInt8 >= x {
+	if 0 <= x && math.MaxUint8 >= x {
 		return uint8(x), nil
 	}
 	return 0, fmt.Errorf("%d 超出了uint8的数值区间.", x)
@@ -20,9 +20,9 @@ func Int2Uint8(x int) (uint8, error) {
 
 func main() {
 	
-	var i int = 127
+	var i int = 255
 	// var i int = -1
-	// var i int = 128
+	// var i int = 256
 	
 	x, err := Int2Uint8(i)
 	if err != nil {
