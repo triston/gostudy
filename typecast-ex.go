@@ -28,7 +28,7 @@ func Float64ToInt(f float64) (int, error) {
 		return int(w), nil
 	}
 
-	return 0, fmt.Errorf("%d 超出了int的数值区间.", f)
+	return 0, fmt.Errorf("%f 超出了int的数值区间.", f)
 }
 
 func main() {
