@@ -11,11 +11,24 @@ import (
 )
 
 
-func Int2Uint8(x int) (uint8, error) {
+func IntToUint8(x int) (uint8, error) {
 	if 0 <= x && math.MaxUint8 >= x {
 		return uint8(x), nil
 	}
 	return 0, fmt.Errorf("%d 超出了uint8的数值区间.", x)
+}
+
+
+func Float64ToInt(f float64) (int, error) {
+	if f >= math.MinInt32 && f <= math.MaxInt32 {
+		w, f := math.Modf(f)
+		if f >= 0.5 {
+			w++
+		}
+		return int(w), nil
+	}
+
+	return 0, fmt.Errorf("%d 超出了int的数值区间.", f)
 }
 
 func main() {
